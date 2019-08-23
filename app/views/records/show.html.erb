@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Trackable:</strong>
+  <%= @record.trackable %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @record.owner %>
+</p>
+
+<p>
+  <strong>Recipient:</strong>
+  <%= @record.recipient %>
+</p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @record.key %>
+</p>
+
+<p>
+  <strong>Parameters:</strong>
+  <%= @record.parameters %>
+</p>
+
+<%= link_to 'Edit', edit_record_path(@record) %> |
+<%= link_to 'Back', records_path %>

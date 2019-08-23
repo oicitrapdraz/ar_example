@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Trackable</th>
+      <th>Owner</th>
+      <th>Recipient</th>
+      <th>Key</th>
+      <th>Parameters</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @records.each do |record| %>
+      <tr>
+        <td><%= record.trackable_type + record.trackable_id.to_s %></td>
+        <td><%= record.owner_type + record.owner_id.to_s %></td>
+        <td><%= record.recipient_type + record.recipient_id.to_s if record.recipient %></td>
+        <td><%= record.key %></td>
+        <td><%= record.parameters %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

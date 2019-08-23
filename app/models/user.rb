@@ -4,8 +4,5 @@ class User < ActiveResource::Base
 
   has_many :pets
 
-  schema do
-    string 'email', 'first_name', 'last_name'
-    integer 'age'
-  end
+
 end
